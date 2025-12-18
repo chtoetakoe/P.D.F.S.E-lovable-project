@@ -12,37 +12,37 @@ const initialPosts = [
     id: "1",
     content: "I have 3 exams next week and I haven't started studying for any of them. I feel so overwhelmed and everyone else seems to have it together.",
     timestamp: "2 hours ago",
-    reactions: 12,
+    reactions: { relate: 12, notAlone: 8, support: 5, feltThis: 6 },
   },
   {
     id: "2",
     content: "Failed my midterm today. I studied so hard but my mind just went blank during the exam. Feeling like I'm not cut out for this.",
     timestamp: "5 hours ago",
-    reactions: 24,
+    reactions: { relate: 24, notAlone: 15, support: 18, feltThis: 12 },
   },
   {
     id: "3",
     content: "It's 3 AM and I'm still working on this assignment. I don't even know if what I'm writing makes sense anymore.",
     timestamp: "8 hours ago",
-    reactions: 18,
+    reactions: { relate: 18, notAlone: 10, support: 7, feltThis: 9 },
   },
   {
     id: "4",
     content: "My group mates aren't responding and the presentation is tomorrow. I'm doing all the work alone again.",
     timestamp: "12 hours ago",
-    reactions: 31,
+    reactions: { relate: 31, notAlone: 22, support: 14, feltThis: 19 },
   },
   {
     id: "5",
     content: "Everyone's posting about their internships and job offers. I haven't even started applying. Feel so behind.",
     timestamp: "1 day ago",
-    reactions: 15,
+    reactions: { relate: 15, notAlone: 11, support: 8, feltThis: 6 },
   },
   {
     id: "6",
     content: "Attended lectures all day, barely understood anything. Too scared to ask questions because everyone else seems to get it.",
     timestamp: "1 day ago",
-    reactions: 27,
+    reactions: { relate: 27, notAlone: 19, support: 12, feltThis: 16 },
   },
 ];
 
@@ -56,7 +56,7 @@ const Feed = () => {
       id: Date.now().toString(),
       content,
       timestamp: "Just now",
-      reactions: 0,
+      reactions: { relate: 0, notAlone: 0, support: 0, feltThis: 0 },
     };
     setPosts([newPost, ...posts]);
     setShowInput(false);
